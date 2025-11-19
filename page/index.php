@@ -6,28 +6,15 @@ include '../layouts/header.php';
 <div class="content">
     <div class="slider">
         <div class="slides">
-            <div class="slide active">
+            <div class="slide">
                 <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="Meeting">
                 <div class="overlay">
                     <h1>PT Valsix Kreasi Teknologi</h1>
                 </div>
             </div>
-            <div class="slide">
-                <img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg" alt="Developer Team">
-                <div class="overlay">
-                    <h1>Solusi Digital Terintegrasi</h1>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg" alt="Office Work">
-                <div class="overlay">
-                    <h1>Kreativitas dan Inovasi Teknologi</h1>
-                </div>
-            </div>
         </div>
 
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
+
     </div>
 
     <div class="main-content">
@@ -42,15 +29,21 @@ include '../layouts/header.php';
         <h2 class="section-title">WHY US?</h2>
         <section class="features">
             <div class="feature-item">
-                <img src="../img/img1.png" alt="Industri Kreatif">
+                <div class="feature-icon-wrapper">
+                    <img src="../img/img1.png" alt="Industri Kreatif">
+                </div>
                 <p><b>Lebih dari 16 Tahun</b><br>di Industri Kreatif</p>
             </div>
             <div class="feature-item">
-                <img src="../img/img2.png" alt="Web Optimal">
+                <div class="feature-icon-wrapper">
+                    <img src="../img/img2.png" alt="Web Optimal">
+                </div>
                 <p><b>Mengembangkan</b><br>Situs Web Secara Optimal</p>
             </div>
             <div class="feature-item">
-                <img src="../img/img1.png" alt="Membantu Usaha">
+                <div class="feature-icon-wrapper">
+                    <img src="../img/img1.png" alt="Membantu Usaha">
+                </div>
                 <p><b>Membantu Anda</b><br>Lebih Mudah Mengelola Usaha</p>
             </div>
         </section>
@@ -58,7 +51,7 @@ include '../layouts/header.php';
         <h2 class="section-title">LAYANAN KAMI</h2>
 
         <div class="service-card">
-            <div class="service-icon">
+            <div class="icon-wrapper">
                 <img src="../img/www.png" alt="Desain Web">
             </div>
             <div class="service-content">
@@ -72,7 +65,7 @@ include '../layouts/header.php';
         </div>
 
         <div class="service-card">
-            <div class="service-icon">
+            <div class="icon-wrapper">
                 <img src="../img/maintenance.png" alt="Pemeliharaan Web">
             </div>
             <div class="service-content">
@@ -87,8 +80,8 @@ include '../layouts/header.php';
         </div>
 
         <div class="service-card">
-            <div class="service-icon">
-                <img src="../img/maintenance.png" alt="Android App">
+            <div class="icon-wrapper">
+                <img src="../img/mobile.png" alt="Android App">
             </div>
             <div class="service-content">
                 <h3>ANDROID APPLICATION</h3>
@@ -99,8 +92,8 @@ include '../layouts/header.php';
         </div>
 
         <div class="service-card">
-            <div class="service-icon">
-                <img src="../img/maintenance.png" alt="Multimedia">
+            <div class="icon-wrapper">
+                <img src="../img/multimedia.png" alt="Multimedia">
             </div>
             <div class="service-content">
                 <h3>INTERACTIVE MULTIMEDIA TECHNOLOGY</h3>
@@ -112,200 +105,318 @@ include '../layouts/header.php';
             </div>
         </div>
     </div>
+
+    <footer class="contact-footer">
+        <div class="footer-col">
+            <div class="footer-icon">
+                <i class="fa fa-phone"></i>
+            </div>
+            <h3>Hubungi Kami</h3>
+            <p>
+                Landline : <br>
+                +62 31 847 4350<br><br>
+                WhatsApp:<br>
+                +62 812 3456 7890
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <div class="footer-icon">
+                <i class="fa fa-pencil"></i>
+            </div>
+            <h3>Email</h3>
+            <p>marketing.care@valsix.co.id</p>
+        </div>
+
+        <div class="footer-col">
+            <div class="footer-icon">
+                <i class="fa fa-map-marker"></i>
+            </div>
+            <h3>Cari Kami</h3>
+            <p>
+                Jl. Kendang Sari VI No.2A <br>
+                Kendangsari, Kec. Tenggilis Mejoyo <br>
+                Surabaya - Jawa Timur 60292
+            </p>
+        </div>
+    </footer>
+
 </div>
 
 <style>
-.slider {
-    position: relative;
-    width: 100%;
-    max-width: 1100px;
-    height: 500px;
-    margin: 20px auto;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
-}
+    .slider {
+        position: relative;
+        width: 100%;
+        max-width: 1100px;
+        height: 500px;
+        margin: 20px auto;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+    }
 
-.slides {
-    position: relative;
-    height: 100%;
-}
+    .slides {
+        position: relative;
+        height: 100%;
+    }
 
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
+    .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+    }
 
-.slide.active {
-    opacity: 1;
-    z-index: 1;
-}
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(70%);
+        border-radius: 12px;
+    }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(70%);
-    border-radius: 12px;
-}
+    .main-image {
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 0 0 12px 12px;
+    }
 
-.main-image {
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 0 0 12px 12px;
-}
-
-.main-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(70%);
-}
-
-.main-content {
-    padding: 60px 80px;
-    background-color: #f9fafb;
-    color: #333;
-}
-
-.main-content p {
-    font-size: 18px;
-    line-height: 1.8;
-    text-align: justify;
-    margin-bottom: 40px;
-}
-
-.features {
-    display: flex;
-    justify-content: space-around;
-    margin: 50px 0;
-    text-align: center;
-    gap: 20px;
-}
-
-.feature-item {
-    background: #fff;
-    border-radius: 12px;
-    padding: 25px 20px;
-    width: 30%;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.feature-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
-}
-
-.feature-item img {
-    width: 100px;
-    margin-bottom: 10px;
-}
-
-.feature-item p {
-    text-align: center;
-    font-size: 16px;
-    color: #1A5551;
-}
-
-.section-title {
-    text-align: center;
-    margin: 50px 0 25px;
-    font-weight: bold;
-    color: #1A5551;
-    font-size: 26px;
-    position: relative;
-}
-
-.section-title::after {
-    content: "";
-    width: 60px;
-    height: 4px;
-    background: #4D9E41;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-.service-card {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 30px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
-}
-
-.service-icon img {
-    width: 90px;
-    margin-right: 25px;
-}
-
-.service-content h3 {
-    margin-bottom: 10px;
-    color: #1A5551;
-}
-
-.service-content p {
-    text-align: justify;
-    line-height: 1.7;
-}
-
-@media (max-width: 992px) {
-
+    .main-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(70%);
+    }
 
     .main-content {
-        padding: 40px 30px;
+        padding: 60px 80px;
+        background-color: #e0e0e0ff;
+        color: #333;
+    }
+
+    .main-content p {
+        font-size: 18px;
+        line-height: 1.8;
+        text-align: justify;
+        margin-bottom: 40px;
     }
 
     .features {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        margin: 50px 0;
+        text-align: center;
+        gap: 20px;
     }
 
     .feature-item {
-        width: 70%;
-        margin-bottom: 25px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 25px 20px;
+        width: 30%;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .feature-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    }
+
+    .feature-icon-wrapper {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        background: #E8FFE4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px;
+        flex-shrink: 0;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+        transition: 0.3s ease;
+    }
+
+    .feature-icon-wrapper img {
+        width: 60%;
+        height: auto;
+        display: block;
+        filter: invert(25%) sepia(50%) saturate(600%) hue-rotate(90deg);
+    }
+
+    .feature-item:hover .feature-icon-wrapper {
+        transform: scale(1.05);
+    }
+
+    .feature-item p {
+        text-align: center;
+        font-size: 16px;
+        color: #1A5551;
+    }
+
+    .section-title {
+        text-align: center;
+        margin: 50px 0 25px;
+        font-weight: bold;
+        color: #1A5551;
+        font-size: 26px;
+        position: relative;
+    }
+
+    .section-title::after {
+        content: "";
+        width: 60px;
+        height: 4px;
+        background: #4D9E41;
+        display: block;
+        margin: 10px auto 0;
+        border-radius: 2px;
     }
 
     .service-card {
-        flex-direction: column;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 30px;
+        margin-bottom: 25px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+    }
+
+    .icon-wrapper {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        background: #E8FFE4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 25px;
+        flex-shrink: 0;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+        transition: 0.3s ease;
+    }
+
+
+    .service-card:hover .icon-wrapper {
+        transform: scale(1.05);
+    }
+
+
+    .icon-wrapper img {
+        width: 70px;
+        filter: invert(25%) sepia(50%) saturate(600%) hue-rotate(90deg);
+    }
+
+
+    .service-content h3 {
+        margin-bottom: 10px;
+        color: #1A5551;
+    }
+
+    .service-content p {
+        text-align: justify;
+        line-height: 1.7;
+    }
+
+    .contact-footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        padding: 70px 20px;
+        background: #1A5551;
+        color: #333;
+        font-family: 'Montserrat', sans-serif;
         text-align: center;
+        border-top: 1px solid #eee;
     }
 
-    .service-icon img {
-        margin-bottom: 15px;
-        margin-right: 0;
+    .contact-footer .footer-col {
+        width: 30%;
+        max-width: 350px;
     }
 
-    .overlay h1 {
-        font-size: 36px;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
+    .contact-footer .footer-col h3 {
+        font-size: 22px;
+        margin-top: 10px;
+        font-weight: 600;
+        color: #e0e0e0ff;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .contact-footer .footer-col p {
+        font-size: 15px;
+        margin-top: 8px;
+        line-height: 1.6;
+        color: #e0e0e0ff;
     }
-}
+
+    .footer-icon {
+        font-size: 38px;
+        color: #e0e0e0ff;
+    }
+
+    @media (max-width: 992px) {
+
+
+        .main-content {
+            padding: 40px 30px;
+        }
+
+        .features {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .feature-item {
+            width: 70%;
+            margin-bottom: 25px;
+        }
+
+        .service-card {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .icon-wrapper {
+            margin: 0 auto 15px;
+        }
+
+        .overlay h1 {
+            font-size: 36px;
+        }
+
+        .contact-footer {
+            flex-direction: column;
+            text-align: center;
+            gap: 40px;
+        }
+
+        .contact-footer .footer-col {
+            width: 100%;
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 </style>
 
 <?php
